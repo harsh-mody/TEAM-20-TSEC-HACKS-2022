@@ -43,6 +43,7 @@ app.get('/quiz', (req, res) => {
     res.render("quiz_home")
 })
 
+
 // START THE SERVER
 app.listen(port, ()=>{
     console.log(`Server is running at http://${hostname}:${port}/`)
