@@ -43,6 +43,23 @@ app.get('/quiz', (req, res) => {
     res.render("quiz_home")
 })
 
+app.get('/stack', (req, res) => {
+    res.render("stack")
+})
+
+app.get('/queue', (req, res) => {
+    res.render("queue")
+})
+
+app.get('/game', (req, res) => {
+    res.render("game")
+})
+
+app.get('/deque', (req, res) => {
+    res.render("deque")
+})
+
+
 // START THE SERVER
 app.listen(port, ()=>{
     console.log(`Server is running at http://${hostname}:${port}/`)

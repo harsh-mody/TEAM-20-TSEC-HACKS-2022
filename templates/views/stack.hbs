@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- font awesome cdn link  -->
+    {{!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> --}}
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/stack_pg.css">
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="stack_page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5">
+                    <h1>Stack</h1>
+                    <p class="st_info">A stack is a conceptual structure consisting of a set of homogeneous elements and is based on the
+                        principle of last in first out (LIFO). It is a commonly used abstract data type with two major
+                        operations, namely push and pop. Push and pop are carried out on the topmost element, which is
+                        the item most recently added to the stack. The push operation adds an element to the stack while
+                        the pop operation removes an element from the top position. The stack concept is used in
+                        programming and memory organization in computers.</p>
+                    
+
+                    <button class="accordion">Code</button>
+                    <div class="panel">
+                        <div class="stack_code"><xmp >#include <stdio.h>
+int MAXSIZE = 8;       
+int stack[8];     
+int top = -1;
+
+int isempty() {
+if(top == -1)
+    return 1;
+else
+    return 0;
+}
+
+int isfull() {
+if(top == MAXSIZE)
+    return 1;
+else
+    return 0;
+}
+int peek() {
+    return stack[top];
+}
+</xmp>                    
+<span id='pop'><xmp>int pop() {
+int data;
+
+if(!isempty()) {
+    data = stack[top];
+    top = top - 1;   
+    return data;
+} else {
+    printf("Could not retrieve data, Stack is empty.\n");
+}
+}</xmp></span>
+
+<span id="push"><xmp>int push(int data) {
+if(!isfull()) {
+    top = top + 1;   
+    stack[top] = data;
+} else {
+    printf("Could not insert data, Stack is full.\n");
+}
+}</xmp></span>
+<xmp>                       
+int main() {
+    // push items on to the stack 
+    push(3);
+    push(5);
+    push(9);
+    push(1);
+    push(12);
+    push(15);
+
+    printf("Element at top of the stack: %d\n" ,peek());
+    printf("Elements: \n");
+
+    // print stack data 
+    while(!isempty()) {
+        int data = pop();
+        printf("%d\n",data);
+    }
+
+    printf("Stack full: %s\n" , isfull()?"true":"false");
+    printf("Stack empty: %s\n" , isempty()?"true":"false");
+    
+    return 0;
+}
+            </xmp></div>
+                    </div>
+
+                    
+
+                </div>
+                <div class="col-7" style="height: 100vh;">
+                    <h1 class="stack_heading">Stack Visualization</h1>
+                    <div class="row" style='height: 100%;'>
+                        <div class="col-4">
+                            <div id='container2' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        </div>
+                        <div class="col-8">
+                            <div class="Operation_btn">
+                                <div class="Operation_btn1" onclick="push()"><button type="button" class="btn ">Push</button>  </div>
+                                <div class="Operation_btn1" ondrop="dropStack(event)" ondragover="allowDrop(event)" onclick="dropStack()"><button type="button" class="btn ">Pop</button></div>
+                            </div>
+                            <div id='container1'>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="classname" style="position: static; bottom: 0; width: 33%; background-color: aqua;position: fixed;bottom: 0; left: 0; display: none;">
+        
+    </div>
+    <script src="js/stack.js"></script>
+</body>
+
+</html>

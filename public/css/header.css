@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+html{
+    /* font-size: 62.5%; */
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+.header{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0.8rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    outline: none; border:none;
+}
+
+.header .logo img{
+    height: 4rem;
+}
+
+.header .navbar a, .icons a{
+    margin:0 1rem;
+    font-size: 1.5rem;
+    color:#fff;
+    text-decoration: none;
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color:var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.tower{
+    border: 3px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.check1{
+    background-color: black; 
+    color: antiquewhite; 
+    width: 80px; 
+    text-align: center; 
+    height: 40px; 
+    padding-top: 5px; 
+    border-radius: 5px;
+}
+
+.check1:hover{
+    cursor: pointer;
+}
+
+.check2{
+    display: flex;
+    justify-content: center;
+}
+
+.tt{
+text-decoration: underline;
+text-align: center;
+}
+
+.tt p{
+    text-align: justify;
+    margin: 10px;
+}
