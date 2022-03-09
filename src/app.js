@@ -39,6 +39,9 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
     res.render("home")
 })
+app.get('/quiz', (req, res) => {
+    res.render("quiz_home")
+})
 
 // START THE SERVER
 app.listen(port, ()=>{
