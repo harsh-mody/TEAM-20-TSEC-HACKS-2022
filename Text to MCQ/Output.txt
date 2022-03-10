@@ -1,0 +1,34 @@
+1) Here "Virat" is of  _______  data type and 26 is of integer data type.We can organize this data as a record like Player record, which will have both player's name and age in it.
+	 a )   Armamentarium
+	 b )   String
+	 c )   Ana
+	 d )   Agglomeration
+
+More options:  ['Art Collection', 'Asia', 'Assortment', 'Aviation', 'Backlog', 'Batch', 'Battery', 'Biota', 'Block', 'Book', 'Bottle Collection', 'Bunch', 'Central America', 'Class', 'Coin Collection', 'Collage'] 
+
+
+2)  _______  is a way of collecting and organising data in such a way that we can perform operations on these data in an effective way.
+	 a )   Contrivance
+	 b )   Data structure
+	 c )   Calendar
+	 d )   Classification System
+
+More options:  ['Coordinate System', 'Data Structure', 'Design', 'Distribution', 'Genetic Map', 'Kinship System', 'Lattice', 'Living Arrangement', 'Ontology'] 
+
+
+3) Here "Virat" is of String data type and 26 is of integer data type.We can organize this data as a record like  _______  record, which will have both  _______ 's name and age in it.
+	 a )   Abomination
+	 b )   Player
+	 c )   Abjurer
+	 d )   Abator
+
+More options:  ['Abstainer', 'Achiever', 'Acquaintance', 'Acquirer', 'Active', 'Actor', 'Adjudicator', 'Admirer', 'Adoptee', 'Adult', 'Adventurer', 'Adversary', 'Advisee', 'Advocate', 'Affiant', 'African'] 
+
+
+4) It should be designed and implemented in such a way that it reduces the complexity and increases the efficiency.An  _______  is a finite set of instructions or logic, written in order, to accomplish a certain predefined task.
+	 a )   Algorithm
+	 b )   Heuristic
+	 c )   Metarule
+	 d )   Recursion
+
+More options:  [] 

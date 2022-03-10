@@ -213,6 +213,9 @@ app.get('/deque', (req, res) => {
     res.render("deque")
 })
 
+app.get('/Compete', (req, res) => {
+    res.render("compete")
+})
 
 // START THE SERVER
 app.listen(port, ()=>{

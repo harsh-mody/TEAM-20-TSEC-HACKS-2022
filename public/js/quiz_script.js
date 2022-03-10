@@ -99,7 +99,7 @@ function showQuetions(index){
     + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
     que_text.innerHTML = que_tag; //adding new span tag inside que_tag
     option_list.innerHTML = option_tag; //adding new div tag inside option_tag
-    
+
     const option = option_list.querySelectorAll(".option");
 
     // set onclick attribute to all available options
@@ -120,7 +120,7 @@ function optionSelected(answer){
     const allOptions = option_list.children.length; //getting all option items
     
     if(userAns == correcAns){ //if user selected option is equal to array's correct answer
-        userScore += 1 + (counter*0.25); //upgrading score value with 1
+        userScore += 1; //upgrading score value with 1
         answer.classList.add("correct"); //adding green color to correct selected option
         answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
         console.log("Correct Answer");
@@ -151,7 +151,7 @@ function showResult(){
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 3){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length * 0.25 * 15 +'</p></span>';
+        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
     else if(userScore > 1){ // if user scored more than 1
