@@ -1,5 +1,5 @@
-var rod1disks = [7, 6, 5, 4, 3, 2, 1]
-var colors= ['#eb08cb', '#961fe1', '#471864', '#32172c', '#857793', '#c26aad', '#bc9697']
+var rod1disks = [3, 2, 1]
+var colors= ['#eb08cb', '#961fe1', '#471864']
 var rod2disks = []
 var rod3disks = []
 console.log(rod1disks)
@@ -36,6 +36,12 @@ function drop(ev){
     var data = ev.dataTransfer.getData("text");
     var l = document.getElementById(data)
     var rod = ev.target
+    if (rod.lastChild != null) {
+        if (parseInt(rod.lastChild.innerText) < data){
+            alert('You cannot place larger disk on smaller')
+            return;
+        }
+    }
     rod.appendChild(l)
     count ++
 }
@@ -43,28 +49,37 @@ function drop(ev){
 function Check(){
     var element = document.getElementById('col2');
     var children = element.children;
-    var index = 7;
-    var i = 0;
-    for(var i=0; i<children.length; i++){
-        var child = children[i];
-        if(child.innerText != index){
-            i = 1
+    console.log(children[0])
+    var arr = [3, 2, 1]
+    var i=0;
+    for(; i < children.length; i++){
+        var child = children[i]
+        console.log(child)
+        if (parseInt(child.innerText) != arr[i]){
+            alert('Wrong')
+            return
         }
-        index -= 1;
+    } 
+    if (i == 2){
+        alert('You win!! with ' + count + ' clicks')
+        return
     }
     var element = document.getElementById('col3');
     var children = element.children;
-    var index = 7;
-    for(var i=0; i<children.length; i++){
-        var child = children[i];
-        if(child.innerText != index){
-            i = 1
+    var arr = [3, 2, 1]
+    var i=0;
+    for(; i < children.length; i++){
+        var child = children[i]
+        console.log(child)
+        if (parseInt(child.innerText) != arr[i]){
+            alert('Wrong')
+            return
         }
-        index -= 1
-    }
-    if (i == 0){
-        alert('You win!! with '+ count+' turns')
-    } else{
-        alert('Try again!! :(')
+    } 
+    if (i == 2){
+        alert('You win!! with ' + count + ' clicks')
+        return
+    } else {
+        alert('You win!! with ' + count + ' clicks')
     }
 }

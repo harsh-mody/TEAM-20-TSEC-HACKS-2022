@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaderBoard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        h1{
+            color: white;
+            font-size: 44px;
+            padding-top: 100px;
+        }
+        div{
+            width: 40%;
+            margin-left: 30%;
+            color : white;
+           
+        }
+        table{
+            width: 50%;
+            box-sizing: border-box;
+            display: inline;
+            border: 1px solid white;
+        }
+        table tr{
+            text-align: center;
+            font-size: 20px;
+        }
+        table th{
+            border-bottom: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    {{>navbar}}
+    <h1 align="center">LeaderBoard</h1>
+    <div>
+    <table>
+        <tr>
+            <th>Username</th>
+        </tr>
+        {{#each users}}
+        <tr>
+            <td>{{this}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    <table>
+        <tr>
+            <th>Score</th>
+        </tr>
+        {{#each quiz1}}
+        <tr>
+            <td>{{this}}</td>
+        </tr>
+        {{/each}}
+        {{!-- {{/each}}
+        {{#each quiz2}}
+        <tr>
+            <td>{{this}}</td>
+            
+        </tr>
+        {{/each}}
+        {{#each quiz3}}
+        <tr>
+            <td>{{this}}</td>
+            
+        </tr>
+        {{/each}}
+        --}}
+        
+    </table>
+    </div>
+</body>
+{{!-- <script src="js/leaderboard.js"></script> --}}
+</html>

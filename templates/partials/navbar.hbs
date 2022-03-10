@@ -10,15 +10,22 @@
     <nav class="navbar">
         <a href="/">home</a>
         <a href="#dsalearning">DSA Learning</a>
-        <a href="/quiz">Quiz</a>
+        <a href="/AllQuiz">Quiz</a>
         <a href="/game">Games</a>
         
     </nav>
-
+    {{#if showlog}}
     <div class="icons">
-        <a href="#about">Login</a>
-        <a href="#menu">Register</a>
+        <a href="/Login">Login</a>
+        <a href="/Register">Register</a>
     </div>
+    {{/if}}
+    {{#if showname}}
+    <div class="icons">
+        <a href="/account">Welcome {{name}}</a>
+        {{!-- <a href="/LeaderBoard">LeaderBoard</a> --}}
+    </div>
+    {{/if}}
 
 
 </header>
