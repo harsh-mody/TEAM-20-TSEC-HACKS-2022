@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="quiz_home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="css/quiz_home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        .heading{
+            padding-top: 120px;
+            text-align: center;
+            font-size: 44px;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
+
+{{>navbar}}
+<h1 class="heading">Queue Quiz</h1>
     <div class="start_btn"><button>Start Quiz</button></div>
     <div class="info_box">
         <div class="info-title"><span>Some Rules of this Quiz</span></div>
@@ -58,8 +71,9 @@
         </div>
     </div>
 
-    <script src="js/questions.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/quiz_questions3.js"></script>
+    <script src="js/quiz_script.js"></script>
 
 </body>
+
 </html>

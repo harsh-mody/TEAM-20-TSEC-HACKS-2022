@@ -1,3 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamify DSA</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/quiz_home.css"> -->
+</head>
+<body>
+    
+
 {{>navbar}}
-<h1>Hello</h1>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Gamifying DSA</h3>
+        <p>Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to to, let us concentrate rather on explaining to human beings what we want a computer to do.</p>
+        <a href="#dsalearning" class="btn">get started</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> us </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/about.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>We make your DSA life easier!</h3>
+            <p>Gamify DSA is the automated question generator and verifier (the online quiz system) that allows students to test their knowledge of basic data structures and algorithms. </p>
+            <p>It helps users build and maintain consistency while
+learning concepts and practicing DSA/core subjects.</p>
+            <a href="#" class="btn">learn more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+    <h1 id="dsalearning" class="heading"> DSA <span>Learning</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/stack.jpg" alt="">
+            <h3>STACK</h3>
+            <a href="/stack" class="btn">Let's Learn Stack Concepts</a>
+        </div>
+
+        <div class="box">
+            <img src="images/queue.png" alt="">
+            <h3>QUEUE</h3>
+            <a href="/queue" class="btn">Let's Learn Queue Concepts</a>
+        </div>
+
+        <div class="box">
+            <img src="images/deque.png" alt="">
+            <h3>DEQUE</h3>
+            <a href="/deque" class="btn">Let's Learn Deque Concepts</a>
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
 {{>footer}}
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="js/quiz_questions.js"></script>
+    <script src="js/quiz_script.js"></script>
+</body>
+</html>

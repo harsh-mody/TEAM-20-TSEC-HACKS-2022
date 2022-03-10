@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamify</title>
+    <link rel="stylesheet" href="css/loginpage.css">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="css/font-awesome.css" rel="stylesheet">	
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+   
+</head>
+<body>
+    <div class="mainw3-agileinfo">
+    <!-- Login Form -->
+    <div class="login-form">  
+    <div class="login-agileits-top"> 	
+        <form action="/login" name="f1" method="post"> 
+            <p class="error" style="color: red;margin: 0;padding: 0;display: block;" >{{msg}}</p>
+            <p>Username </p>
+            <input id="input1" type="text" class="name" name="name" placeholder="Username" required=""/>
+           
+            <p>Password</p>
+            <input id="input2" type="password" class="password" name="password" placeholder=".........." required=""/>  
+           
+            <label class="anim">
+                <input type="checkbox" class="checkbox">
+                <span> Remember me ?</span> 
+            </label>   
+            <input type="submit" value="Login"> 
+        </form> 	
+    </div> 
+    <div class="login-agileits-bottom"> 
+        <h6><a href="#">Forgot password?</a></h6>
+    </div>  
+        <div class="login-agileits-bottom"> 
+        <h5>Dont Have An Account? <a href="/Register">Register</a></h5>
+    </div>  
+    <div class="social-w3lsicon">
+        <a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a> 
+        <a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a> 
+        <a href="#" class="social-button drble"><i class="fa fa-dribbble"></i></a> 
+        <a href="#" class="social-button be"><i class="fa fa-behance"></i></a> 
+        <a href="#" class="social-button in"><i class="fa fa-linkedin"></i></a> 
+    </div>  
+    </div>
+</div> 
+<script src="js/superplaceholder.js"></script>
+	<script>
+	superplaceholder({
+			el: input1,
+			sentences: [ 'john.smith11', 'lorem.ipsum55', 'example@name2' ],
+			options: {
+				loop: true,
+				startOnFocus: false
+			}
+		})
+		superplaceholder({
+			el: input2,
+			sentences: [ '.........', '.....', '.....' ],
+			options: {
+				loop: true,
+				startOnFocus: false 
+			}
+		})
+        {{!-- document.getElementById("nameloc").innerHTML= "Working"; --}}
+	</script>
+    </body>

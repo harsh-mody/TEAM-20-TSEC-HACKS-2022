@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    {{>navbar}}
+    <div class="container">
+        <h1 class="tt">Tower of Hanoi</h1>
+        <p>Tower of Hanoi is a mathematical puzzle where we have three rods and n disks. The objective of the puzzle is to move the entire stack to another rod, obeying the simple rules: 
+
+            Only one disk can be moved at a time.
+            Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack i.e. a disk can only be moved if it is the uppermost disk on a stack.
+            No disk may be placed on top of a smaller disk.</p>
+        <div class="row">
+            <div class="col-4 tower" id="col1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-4 tower" id="col2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-4 tower" id="col3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="check2">
+            <button class="check1" onclick="Check()">Check</button>
+            
+        </div>
+    </div>
+    <script src="js/towerofhanoi.js"></script>
+    <style>
+        .container{
+            padding-top: 100px;
+        }
+
+        .col-4{
+            text-align: center;
+            min-height: 385px;
+        }
+
+    </style>
+</body>
+</html>
