@@ -29,7 +29,7 @@ img{max-width:100%;}
 /*-- end reset --*/
 body {
     font-family: 'Open Sans', sans-serif;
-    background: url("/images/backLogin.jpg")repeat 0px 0px;
+    background: url(../images/4.webp)repeat 0px 0px;
     background-attachment: fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover; 
@@ -129,6 +129,7 @@ h1 {
     font-size: 1em;
     font-weight: 300;
     letter-spacing: 3px;
+    color: white;
 }
 .login-agileits-bottom h6 a,.login-agileits-bottom h5 a {
     color: #fff;

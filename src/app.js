@@ -81,7 +81,12 @@ app.get('/Login',(req,res)=>{
 app.get('/AllQuiz',(req,res)=>{
     res.render("quiz_section")
 });
-
+app.get('/Quiz2',(req,res)=>{
+    res.render("quiz_2")
+});
+app.get('/Quiz3',(req,res)=>{
+    res.render("quiz_3")
+});
 app.post("/Login", checkNotAuthenticated, passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/",
@@ -101,11 +106,11 @@ app.post("/Register",(req, res) => {
         const sql = "INSERT INTO `users` ( `username`, `email`, `password`) VALUES ('" + name + "', '" + email + "', '" + password + "');"
         connection.query(sql, (err, rows) => {
             if (!err) {
-                return res.send({
-                    msg: "Account Created",
-                });
+                res.render("login");
             } else {
-                res.redirect("/");
+                res.render("register",{
+                    msg : "Error Registering , Try Again"
+                });
             }
         })
     } catch (err) {
